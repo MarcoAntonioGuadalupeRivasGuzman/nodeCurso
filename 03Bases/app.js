@@ -2,7 +2,11 @@ const {createFile} = require('./helpers/multiplicar')
 
 console.clear();
 
-let base = 3
+const [ , ,arg3='base:5']=process.argv
+const [, base]=arg3.split(':');
+//console.log(base)
+
+//let base = 3
 let salida = ''
 
 for(let i=0; i<=10; i++){
