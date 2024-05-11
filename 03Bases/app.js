@@ -1,24 +1,6 @@
 const { options } = require('yargs');
 const { createFile } = require('./helpers/multiplicar')
-const argv = require('yargs')
-    .option('b', {
-        alias: 'base',
-        type: 'number',
-        demandOption: true
-    })
-    .option('l', {
-        alias: 'listar',
-        type: 'boolean',
-        demandOption: true,
-        default: true
-    })
-    .check((argv, options) => {
-        if (isNaN(argv.base)) {
-            throw 'La base debe ser un numero'
-        }
-        return true
-    })
-    .argv;
+const argv = require('./config/yargs')
 
 console.clear();
 
