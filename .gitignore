@@ -1,6 +1,7 @@
 # dependencies
 /node_modules
 /03Bases/node_modules
+/04AppConsola/node_modules
 /.pnp
 .pnp.js
 *.txt
