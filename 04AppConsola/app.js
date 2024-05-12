@@ -1,13 +1,15 @@
-require('colors')
-const { showMenu, pausa } = require('./helpers/mensajes')
+import colors from 'colors'
+import inquirer from 'inquirer'
+//const { inquirerMenu } = require('./helpers/menu')
+//const { showMenu, pausa } = require('./helpers/mensajes')
 
 
-const main= async()=>{
+/*const main= async()=>{
 
     let opt=''
 
     do {
-        opt = await showMenu() 
+        opt = await inquirerMenu() 
 
         await pausa()
 
@@ -15,4 +17,23 @@ const main= async()=>{
 
 }
 
-main()
+main()*/
+
+const answer = await inquirer.prompt([
+    {
+        type: 'input',
+        name: 'name',
+        message: 'What is your name?'
+    },
+    {
+        type: 'number',
+        name: 'age',
+        message: 'Enter your age: '
+    },
+    {
+        type: 'list',
+        name: 'gender',
+        message: 'What is your gender?',
+        choices: ['Male', 'Female', 'Prefer not to say']
+    }
+]);
